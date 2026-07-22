@@ -29,10 +29,10 @@ The UI provides:
 
 | Qty | Item | Notes |
 | ---: | --- | --- |
-| 1 | MikroE Stepper 11 Click | TB9120AFTG stepper driver with PCA9538A I2C expander |
-| 1 | MikroE FTDI Click | FT2232H USB bridge |
-| 1 | MikroE Feather Click Shield | FTDI Click in the left socket; Stepper 11 Click in the right socket |
-| 1 | Four-wire bipolar stepper motor | Tested with STEPPERONLINE 17HS08-1004-ME1K, 1.0 A/phase, 200 steps/rev |
+| 1 | [MikroE Stepper 11 Click](https://www.mikroe.com/stepper-11-click) | TB9120AFTG stepper driver with PCA9538A I2C expander |
+| 1 | [MikroE FTDI Click](https://www.mikroe.com/ftdi-click) | FT2232H USB bridge |
+| 1 | [MikroE Feather Click Shield](https://www.mikroe.com/feather-click-shield) | FTDI Click in the left socket; Stepper 11 Click in the right socket |
+| 1 | [STEPPERONLINE 17HS08-1004-ME1K](https://www.omc-stepperonline.com/nema-17-closed-loop-stepper-motor-16ncm-22-7oz-in-with-magnetic-encoder-1000ppr-4000cpr-17hs08-1004-me1k) | Four-wire bipolar motor, 1.0 A/phase, 200 steps/rev, magnetic encoder |
 | 1 | Regulated 7–18 V DC supply | Use a conservative current limit during bring-up |
 | 1 | USB data cable | Must match the FTDI Click connector and support data |
 | 4 | Female-to-female Dupont jumper wires | Connect the exposed Feather header pins |
@@ -91,8 +91,11 @@ jumper is present.
 
 ### Set the phase current
 
-VR1 sets the actual motor phase current; the UI torque buttons only select
-100%, 70%, 50%, or 30% of that setting.
+VR1 sets the reference phase-current limit used by the UI's **100%** torque
+setting. Calibrate VR1 so that 100% produces the intended phase current for
+your motor (1.0 A/phase for the tested 17HS08-1004-ME1K); do not automatically
+turn VR1 to its maximum. The other UI settings select 70%, 50%, or 30% of that
+calibrated limit.
 
 1. Begin with a conservative bench-supply current limit.
 2. Select **100% torque** in the UI.
