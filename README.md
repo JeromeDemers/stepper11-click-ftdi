@@ -44,6 +44,12 @@ The UI provides:
 This wiring is for the exact arrangement shown below: **FTDI Click on the left**
 and **Stepper 11 Click on the right**, with no Feather board installed.
 
+### Verified bench setup
+
+![Working Stepper 11 Click setup on the bench](images/bench-setup.png)
+
+### Wiring diagram
+
 ![Complete Stepper 11 Click and FTDI wiring](images/connection-diagram.png)
 
 ### Board configuration
@@ -206,6 +212,7 @@ channels and the Stepper 11 I2C expander are available.
 examples/
     motor_ui.py          Tkinter motor-control application
 images/
+    bench-setup.png
     connection-diagram.png
     motor-ui.png
 stepper11_ftdi/
