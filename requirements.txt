@@ -1,0 +1,2 @@
+pyftdi>=0.55.4
+ftd2xx>=1.3.3; platform_system == "Windows"
